@@ -14,7 +14,7 @@ jobs:
       - name: Test branding 
         run: |
           echo "$BRANDING_URL"
-          envsubst < nginx.conf
+          envsubst < nginx.conf.template > nginx.conf
           cat nginx.conf
         env:
           BRANDING_URL: ${{ vars.BRANDING_URL }}
