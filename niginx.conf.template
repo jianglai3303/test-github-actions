@@ -7,7 +7,7 @@ http{
     index index.html;
     include /etc/nginx/mime.types;
     location /tenant {
-        rewrite ^/tenant/?(.*)$ https://develop--portal-branding.netlify.app/tenant/$1 permanent;
+        proxy_pass https://develop--portal-branding.netlify.app/tenant/;
     }
     location / {
       index  index.html index.htm;
