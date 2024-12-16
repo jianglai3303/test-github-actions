@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Create branding file
+      - name: Test branding 
         run: |
-          echo '{{ vars.BRANDING_URL }}' >> branding.txt
+          echo '{{ vars.BRANDING_URL }}'
